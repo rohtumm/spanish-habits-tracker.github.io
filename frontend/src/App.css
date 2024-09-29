@@ -1,38 +1,40 @@
+/* Main page styling */
 .App {
+  display: flex;
+  flex-direction: column; /* Ensure elements are stacked vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #001f3f; /* Dark navy shade of blue */
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 3rem; /* Make the heading big */
+  margin-bottom: 20px;
+}
+
+select {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-bottom: 20px; /* Space between dropdown and button */
+  border-radius: 5px;
+  border: none;
+  width: 300px; /* Make the dropdown wider */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #0074D9; /* Bright blue for the button */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
 }
