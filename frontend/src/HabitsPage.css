@@ -1,0 +1,37 @@
+.habits-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #001f3f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .scrollable-table {
+    max-height: 400px; /* Set the max height for the table container */
+    overflow-y: auto; /* Allow vertical scrolling */
+    width: 80%; /* Adjust width of the table */
+    margin-top: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    font-size: 1.2rem;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(1.5);
+  }
+  
