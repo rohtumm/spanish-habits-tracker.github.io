@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
+import FeedbackPage from './FeedbackPage';
 
 function App() {
   const [selectedStudent, setSelectedStudent] = useState('');
@@ -14,8 +15,8 @@ function App() {
 
   const handleProceed = () => {
     if (selectedStudent) {
-      localStorage.setItem('selectedStudent', selectedStudent); // Save the selected student
-      navigate('/habits'); // Navigate to the habits page
+      localStorage.setItem('selectedStudent', selectedStudent); 
+      navigate('/habits'); 
     } else {
       alert('Please select a student.');
     }
