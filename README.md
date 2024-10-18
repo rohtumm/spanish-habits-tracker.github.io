@@ -6,7 +6,7 @@ This project is a website that allows Spanish teachers to track their students' 
 
 ```bash
 git clone https://github.com/rohtumm/Spanish-Habits-Tracker.git
-cd Spanish Spanish-Habits-Tracker
+cd Spanish-Habits-Tracker
 ```
 ## Installing Dependencies
 
