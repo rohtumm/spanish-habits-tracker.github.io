@@ -17,21 +17,21 @@ function App() {
 
   // Sample passwords - in a real app, store these securely
   const studentPasswords = { 
-    'Student 1': 'password1',
-    'Student 2': 'password2',
-    'Student 3': 'password3',
-    'Student 4': 'password4',
-    'Student 5': 'password5',
-    'Student 6': 'password6',
-    'Student 7': 'password7',
-    'Student 8': 'password8',
-    'Student 9': 'password9',
-    'Student 10': 'password10',
-    'Student 11': 'password11',
-    'Student 12': 'password12',
-    'Student 13': 'password13',
-    'Student 14': 'password14',
-    'Student 15': 'password15'
+    'Student 1': 'Password1',
+    'Student 2': 'Password2',
+    'Student 3': 'Password3',
+    'Student 4': 'Password4',
+    'Student 5': 'Password5',
+    'Student 6': 'Password6',
+    'Student 7': 'Password7',
+    'Student 8': 'Password8',
+    'Student 9': 'Password9',
+    'Student 10': 'Password10',
+    'Student 11': 'Password11',
+    'Student 12': 'Password12',
+    'Student 13': 'Password13',
+    'Student 14': 'Password14',
+    'Student 15': 'Password15'
   };
 
   const handleProceed = () => {
