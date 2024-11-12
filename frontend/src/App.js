@@ -7,8 +7,6 @@ function App() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  print("")
-
   const students = [
     'Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5',
     'Student 6', 'Student 7', 'Student 8', 'Student 9', 'Student 10',
@@ -16,22 +14,22 @@ function App() {
   ];
 
   // Sample passwords - in a real app, store these securely
-  const studentPasswords = { 
-    'Student 1': 'p1',
-    'Student 2': 'p2',
-    'Student 3': 'p3',
-    'Student 4': 'p4',
-    'Student 5': 'p5',
-    'Student 6': 'p6',
-    'Student 7': 'p7',
-    'Student 8': 'p8',
-    'Student 9': 'p9',
-    'Student 10': 'p10',
-    'Student 11': 'p11',
-    'Student 12': 'p12',
-    'Student 13': 'p13',
-    'Student 14': 'p14',
-    'Student 15': 'p15'
+  const studentPasswords = {
+    'Student 1': 'password1',
+    'Student 2': 'password2',
+    'Student 3': 'password3',
+    'Student 4': 'password4',
+    'Student 5': 'password5',
+    'Student 6': 'password6',
+    'Student 7': 'password7',
+    'Student 8': 'password8',
+    'Student 9': 'password9',
+    'Student 10': 'password10',
+    'Student 11': 'password11',
+    'Student 12': 'password12',
+    'Student 13': 'password13',
+    'Student 14': 'password14',
+    'Student 15': 'password15'
   };
 
   const handleProceed = () => {
