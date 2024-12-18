@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import HabitsPage from './HabitsPage';
 import FeedbackPage from './FeedbackPage';
+import PointsRankingPage from './PointsRankingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +14,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/habits" element={<HabitsPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/rankings" element={<PointsRankingPage />} />
     </Routes>
   </Router>
 );

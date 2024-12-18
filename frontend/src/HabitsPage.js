@@ -10,15 +10,14 @@ function HabitsPage() {
   // Initialize habits and weeks
   const habits = [
     'Hablar con amigos (15 min.)', 'Ir a tutoría', 'La mesa de conversación', 'Hablar con un Pen-Pal', 
-    'Hablar con un hispano (15 min.)', 'Enseñar español', 'Leer las noticias', 'Lee un libro (Un capítulo)',
-    'Estudiar en Conjuguemos', 'Leer un artículo', 'Escuchar un podcast', 'Mirar videos en Youtube (20 m)',
+    'Hablar con un hispano (15 min.)', 'Enseñar español', 'Leer las noticias', 'Lee un libro (Un capítulo)', 'Leer un artículo', 'Escuchar un podcast', 'Mirar videos en Youtube (20 m)',
     'Escuchar música (15 min.)', 'Escuchar la radio (15 min.)', 'Duolingo (15 min.)', 'Mirar una película',
     'Episodio de una serie', 'Mirar videos educativos', 'Escribir un diario', 'Estudio independiente', 
     'Estudiar en conjuguemos (15 min.)', 'Estudiar en Quizlet (15 min.)', 'Escribir un cuento', 
     'Escribir un correo electrónico', 'Ordenar comida en un restaurante', 'Cocinar', 'Jugar juegos de mesa', 
     'Ir a un museo de arte hispano'
   ];
-  const weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'];
+  const weeks = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'];
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem(studentName)) || {};
@@ -39,22 +38,22 @@ function HabitsPage() {
 
   // Function to return a class for row grouping
   const getRowClass = (rowIndex) => {
-    if (rowIndex < 5) return 'group1';
-    if (rowIndex < 10) return 'group2';
-    if (rowIndex < 15) return 'group3';
-    if (rowIndex < 20) return 'group4';
-    if (rowIndex < 25) return 'group5';
+    if (rowIndex < 6) return 'group1';
+    if (rowIndex < 9) return 'group2';
+    if (rowIndex < 17) return 'group3';
+    if (rowIndex < 23) return 'group4';
+    if (rowIndex < 27) return 'group5';
     return 'group6';
   };
 
   return (
     <div className="habits-page">
-      <h1>{studentName}'s Habits Page</h1>
+      <h1>Rastreador de Hábitos Para {studentName}</h1>
       <div className="scrollable-table">
         <table>
           <thead>
             <tr>
-              <th>Habits</th>
+              <th>Hábitos</th>
               {weeks.map((week, index) => (
                 <th key={index}>{week}</th>
               ))}
@@ -82,9 +81,19 @@ function HabitsPage() {
       <button
         className="feedback-button"
         onClick={() => navigate('/feedback')}
+        style={{ padding: '1rem 1rem', fontSize: '0.8rem', marginBottom: '0.5rem', marginTop: '0.5rem' }}
       >
-        Go to Feedback Page
+        Ir a la Página de Feedback
       </button>
+
+      <button
+        className="ranking-button"
+        onClick={() => navigate('/rankings')}
+        style={{ padding: '1rem 1rem', fontSize: '0.8rem' }}
+      >
+        Ir a la Página de Puntos
+      </button>
+
     </div>
   );
 }
