@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './HabitsPage.css';
 
 function HabitsPage() {
+  // Storing student's habit completion data
   const [studentData, setStudentData] = useState({});
+  // Get the student's name
   const studentName = localStorage.getItem('selectedStudent');
   const navigate = useNavigate();
 
@@ -17,13 +19,15 @@ function HabitsPage() {
     'Escribir un correo electrónico', 'Ordenar comida en un restaurante', 'Cocinar', 'Jugar juegos de mesa', 
     'Ir a un museo de arte hispano'
   ];
-  const weeks = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'];
+  const weeks = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6', 'Semana 7', 'Semana 8', 'Semana 9', 'Semana 10'];
 
+  // Load saved habit data from localStorage when student changes
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem(studentName)) || {};
     setStudentData(savedData);
   }, [studentName]);
 
+  // Updates the completion status of a habit for a specific week
   const handleCheckboxChange = (habit, week) => {
     const updatedData = {
       ...studentData,
@@ -36,7 +40,7 @@ function HabitsPage() {
     localStorage.setItem(studentName, JSON.stringify(updatedData));
   };
 
-  // Function to return a class for row grouping
+  // Function to return a class for row grouping (this is for color coding)
   const getRowClass = (rowIndex) => {
     if (rowIndex < 6) return 'group1';
     if (rowIndex < 9) return 'group2';
@@ -46,6 +50,7 @@ function HabitsPage() {
     return 'group6';
   };
 
+  // Generating layout for page and buttons to go to following pages
   return (
     <div className="habits-page">
       <h1>Rastreador de Hábitos Para {studentName}</h1>
@@ -78,6 +83,7 @@ function HabitsPage() {
         </table>
       </div>
 
+      
       <button
         className="feedback-button"
         onClick={() => navigate('/feedback')}

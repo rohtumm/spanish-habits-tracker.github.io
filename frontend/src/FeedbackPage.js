@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const FeedbackPage = () => {
+  // Set the feedback and commentary boxes to empty states to start
   const [feedback, setFeedback] = useState('');
   const [error, setError] = useState(null);
   const [userPrompt, setUserPrompt] = useState('');

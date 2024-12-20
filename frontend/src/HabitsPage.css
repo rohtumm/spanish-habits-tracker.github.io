@@ -11,6 +11,8 @@
 
 .scrollable-table {
   max-height: 400px;
+  max-width: 1000px;
+  overflow-x: auto;
   overflow-y: auto;
   width: 80%;
   margin-top: 20px;
