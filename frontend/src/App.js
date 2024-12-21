@@ -3,17 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
+  // State to track the selected student from the dropdown
   const [selectedStudent, setSelectedStudent] = useState('');
+  // State to track the password entered by the user
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  // List of all student names for the dropdown menu
   const students = [
     'Student 1', 'Student 2', 'Student 3', 'Student 4', 'Student 5',
     'Student 6', 'Student 7', 'Student 8', 'Student 9', 'Student 10',
     'Student 11', 'Student 12', 'Student 13', 'Student 14', 'Student 15'
   ];
 
-  // Sample passwords - in a real app, store these securely
+  // Mapping each student to their corresponding password
   const studentPasswords = {
     'Student 1': 'password1',
     'Student 2': 'password2',
@@ -32,10 +35,12 @@ function App() {
     'Student 15': 'password15'
   };
 
+  // Function to handle the "Continuar" button click
   const handleProceed = () => {
+    // Check if both a student is selected and a password is entered
     if (selectedStudent && password) {
-      const correctPassword = studentPasswords[selectedStudent];
-      if (password === correctPassword) {
+      const correctPassword = studentPasswords[selectedStudent]; // Retrieve the correct password for the selected student
+      if (password === correctPassword) { // Validate the entered password
         localStorage.setItem('selectedStudent', selectedStudent);
         navigate('/habits');
       } else {
@@ -49,6 +54,7 @@ function App() {
   return (
     <div className="App">
       <h1>¡Bienvenido a tu Rastreador de Hábitos!</h1>
+      {/* Dropdown menu for selecting a student */}
       <select 
         value={selectedStudent} 
         onChange={(e) => setSelectedStudent(e.target.value)}
@@ -59,6 +65,7 @@ function App() {
         ))}
       </select>
       <br />
+      {/* Input field for entering the password */}
       <input
         type="password"
         placeholder="Enter password"
@@ -66,6 +73,7 @@ function App() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
+      {/* Button to proceed to the next page */}
       <button onClick={handleProceed}>Continuar</button>
     </div>
   );
